@@ -1,4 +1,5 @@
 #include "mainwidget.h"
+#include "globalshortcut.h"
 #include <QApplication>
 #include <QTextEdit>
 #include <QHBoxLayout>
@@ -203,14 +204,27 @@ void MainWidget::closeEvent(QCloseEvent *event){
     event->ignore();
 }
 
+void MainWidget::activated()
+{
+    if(MainWidget::isFullScreen()){
+        hide();
+    } else {
+        showFullScreen();
+        setWindowState(Qt::WindowFullScreen);
+    }
+}
 
 int main(int argc,char*argv[])
 {
+
     QApplication app(argc,argv);
     MainWidget w;
 
     w.setWindowTitle("ZenMode");
     w.showMaximized();
+
+    GlobalShortCut *shortcut = new GlobalShortCut("F11",&w);
+    QObject::connect(shortcut,SIGNAL(activated()),&w,SLOT(activated()));
 
     return app.exec();
 }

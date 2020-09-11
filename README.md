@@ -4,15 +4,15 @@
 
 ## 右键菜单
 
-![](https://gitee.com/scueee/img/raw/master/utools/2020-8-24/1.png)
+![](img/1.png)
 
 ## 系统托盘
 
-![](https://gitee.com/scueee/img/raw/master/utools/2020-8-24/2.png)
+![](img/2.png)
 
 ## 配置文件
 
-![](https://gitee.com/scueee/img/raw/master/utools/2020-8-24/3.png)
+![](img/3.png)
 
 ## 特性
 

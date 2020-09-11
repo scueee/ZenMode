@@ -16,6 +16,7 @@ signals:
 
 public slots:
     void iconIsActived(QSystemTrayIcon::ActivationReason reason);
+    void activated();
 
 protected:
     void keyPressEvent(QKeyEvent *event);
@@ -34,5 +35,8 @@ private:
     QRgb bg_win = 0xeeeeee;
     QRgb bg_text = 0xdddddd;
 };
+
+
+
 
 #endif // MAINWIDGET_H
